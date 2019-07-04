@@ -5,7 +5,7 @@
     <b-navbar-nav  class="w-100  mb-1">
       <b-navbar-brand href="#">Welcome</b-navbar-brand>
 
-      <b-nav-item href="#" class="pl-4 mb-1" >Subject</b-nav-item>
+      <b-nav-item href="#" class="pl-5 mb-1" >Subjects</b-nav-item>
       <b-nav-item href="#" class="pl-4 mb-1">Topics</b-nav-item>
       <b-nav-item href="#" class="pl-4 mb-1">Questions</b-nav-item>
 
@@ -57,6 +57,7 @@
   </b-modal>
 <b-button  @click="deleteTableRow()" variant="danger">Remove</b-button>
 <br>
+<h3 align="center" style="color:#001a06">Subjects List</h3>
 <table  class="table table-striped" striped>
 <thead style="background:#b8b894">
 <th>Subject ID</th>
@@ -122,6 +123,8 @@ export default {
 }
 </script>
 <style scoped>
-
+#sub_list{
+  padding:10px;
+}
 </style>
 
