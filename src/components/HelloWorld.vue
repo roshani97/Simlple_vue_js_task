@@ -2,32 +2,33 @@
   <div id="hello">
   <div id="navi1">
      <b-navbar  type="dark" variant="dark" >
-    <b-navbar-nav  class="w-100  mb-1">
+    <b-navbar-nav  class="w-100  mb-1" >
       <b-navbar-brand href="#">Welcome</b-navbar-brand>
 
+          </b-navbar-nav>
+      <b-navbar-nav>
       <b-nav-item href="#" class="pl-5 mb-1" >Subjects</b-nav-item>
-      <b-nav-item href="#" class="pl-4 mb-1">Topics</b-nav-item>
-      <b-nav-item href="#" class="pl-4 mb-1">Questions</b-nav-item>
+      <b-nav-item href="#" class="pl-5 mb-1">Topics</b-nav-item>
+      <b-nav-item href="#" class="pl-5 mb-1">Questions</b-nav-item>
 
       <!-- Navbar dropdowns -->
-      <b-nav-item-dropdown text="Utilities" class="pl-4 mb-1">
+      <b-nav-item-dropdown text="Utilities" class="pl-5 mb-1">
         <b-dropdown-item href="#">list1</b-dropdown-item>
         <b-dropdown-item href="#">list2</b-dropdown-item>
         <b-dropdown-item href="#">list3</b-dropdown-item>
         <b-dropdown-item href="#">list</b-dropdown-item>
       </b-nav-item-dropdown>
 
-      <b-nav-item-dropdown text="Page" class="pl-4 mb-1">
+      <b-nav-item-dropdown text="Page" class="pl-5 mb-1">
           <b-dropdown-item href="#">p1</b-dropdown-item>
           <b-dropdown-item href="#">p2</b-dropdown-item>
           <b-dropdown-item href="#">p3</b-dropdown-item>
           <b-dropdown-item href="#">p4</b-dropdown-item>
         </b-nav-item-dropdown>
-    </b-navbar-nav>
-      <b-navbar-nav>
-      <b-nav-item href="#" class="pl-4 mb-1">Table</b-nav-item>
-      <b-nav-item href="#" class="pl-4 mb-1">Chart</b-nav-item>
-      <b-nav-item href="#" class="pl-4 mb-1">Logout</b-nav-item>
+
+      <b-nav-item href="#" class="pl-5 mb-1">Table</b-nav-item>
+      <b-nav-item href="#" class="pl-5 mb-1">Chart</b-nav-item>
+      <b-nav-item href="#" class="pl-5 mb-1">Logout</b-nav-item>
     </b-navbar-nav>
   </b-navbar>
   
