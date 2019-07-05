@@ -66,6 +66,7 @@
 <th>Class</th>
 <th>Board</th>
 <th>Action</th>
+<th>Remove Subject</th>
 </thead>
 <tr>
 <tr v-for="item in rowData" :key="item.sid">
@@ -82,6 +83,14 @@
     <tr><td>Board</td><td><input type="text" v-model="brd"></td></tr>
     </table>
   </b-modal></td>
+  <td><b-form-checkbox
+      id="checkbox-1"
+      v-model="status"
+      name="checkbox-1"
+      value="accepted"
+      unchecked-value="not_accepted"
+    >
+    </b-form-checkbox></td>
 </tr>
 </table>
 </div>
