@@ -59,7 +59,7 @@
 <b-button  @click="deleteTableRow()" variant="danger">Remove</b-button>
 <br>
 <h3 align="center" style="color:#001a06">Subjects List</h3>
-<table  class="table table-striped" striped>
+<table  class="table table-striped" striped id="sub_id">
 <thead style="background:#b8b894">
 <th>Subject ID</th>
 <th>Subject Name</th>
@@ -67,6 +67,7 @@
 <th>Board</th>
 <th>Action</th>
 <th>Remove Subject</th>
+
 </thead>
 <tr>
 <tr v-for="item in rowData" :key="item.sid">
@@ -83,14 +84,8 @@
     <tr><td>Board</td><td><input type="text" v-model="brd"></td></tr>
     </table>
   </b-modal></td>
-  <td><b-form-checkbox
-      id="checkbox-1"
-      v-model="status"
-      name="checkbox-1"
-      value="accepted"
-      unchecked-value="not_accepted"
-    >
-    </b-form-checkbox></td>
+ <td><b-form-checkbox value="accepted" unchecked-value="not_accepted"></b-form-checkbox></td>
+  
 </tr>
 </table>
 </div>
@@ -108,7 +103,9 @@ export default {
          sname:'english',
          cls:'10th',
          brd:'SSC',
-         rowData:[]
+         rowData:[],
+         row_len:'0',
+         del:''
     }
   },
   methods:{
@@ -124,8 +121,21 @@ export default {
       this.$bvModal.hide('modal-1');
    },
     deleteTableRow: function() { 
-    this.rowData.pop();
-    alert("Subject Deleted Successfully!!!!");
+            row_len = rowData.length;
+            alert(row_len);
+            for(var i=0; i<row_len; i++) 
+            {
+                row = rowData[i];
+                chkbox = row.cells[0].childNodes[0];
+                if(chkbox.valueOf()=="accepted")
+                {
+                    del=this.rowData.splice(i, 1);
+                    row_len--;
+                    return del;
+                }
+            }
+
+    
       
    }
 	}
