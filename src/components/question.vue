@@ -29,7 +29,7 @@
   <td>{{ item.sid}}</td>
   <td></td>
   
-<td><b-button variant="info" v-b-modal.modal-2>Edit</b-button>
+<td><b-button  v-b-modal.modal-2>Edit</b-button>
     <b-modal id="modal-2" title="EDIT TOPIC DETAILS">
     <table>
     <tr><td>Topic ID</td><td><input type="text" v-model="tid"></td></tr>
