@@ -1,49 +1,6 @@
 <template>
   <div id="hello">
-  <div id="navi1">
-     <b-navbar  type="dark" variant="dark" >
-    <b-navbar-nav  class="w-100  mb-1" >
-      <b-navbar-brand href="#">Welcome</b-navbar-brand>
-
-          </b-navbar-nav>
-      <b-navbar-nav>
-      <b-nav-item href="#" class="pl-5 mb-1" >Subjects</b-nav-item>
-      <b-nav-item href="#" class="pl-5 mb-1">Topics</b-nav-item>
-      <b-nav-item href="#" class="pl-5 mb-1">Questions</b-nav-item>
-
-      <!-- Navbar dropdowns -->
-      <b-nav-item-dropdown text="Utilities" class="pl-5 mb-1">
-        <b-dropdown-item href="#">list1</b-dropdown-item>
-        <b-dropdown-item href="#">list2</b-dropdown-item>
-        <b-dropdown-item href="#">list3</b-dropdown-item>
-        <b-dropdown-item href="#">list</b-dropdown-item>
-      </b-nav-item-dropdown>
-
-      <b-nav-item-dropdown text="Page" class="pl-5 mb-1">
-          <b-dropdown-item href="#">p1</b-dropdown-item>
-          <b-dropdown-item href="#">p2</b-dropdown-item>
-          <b-dropdown-item href="#">p3</b-dropdown-item>
-          <b-dropdown-item href="#">p4</b-dropdown-item>
-        </b-nav-item-dropdown>
-
-      <b-nav-item href="#" class="pl-5 mb-1">Table</b-nav-item>
-      <b-nav-item href="#" class="pl-5 mb-1">Chart</b-nav-item>
-      <b-nav-item href="#" class="pl-5 mb-1">Logout</b-nav-item>
-    </b-navbar-nav>
-  </b-navbar>
   
-  </div>
-  <div id="navi2">
-  <div>
-  <b-navbar type="light" variant="light">
-    <b-nav-form>
-          <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-          <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-        </b-nav-form>
-  </b-navbar>
-</div>
-  </div>
-
   <div id="sub_list" align="right">
     <b-button v-b-modal.modal-1 variant="success">Add Subject</b-button>
     <b-modal id="modal-1" title="ADD SUBJECT DETAILS" hide-footer>
@@ -84,7 +41,7 @@
     <tr><td>Board</td><td><input type="text" v-model="brd"></td></tr>
     </table>
   </b-modal></td>
- <td><b-form-checkbox value="accepted" unchecked-value="not_accepted"></b-form-checkbox></td>
+ <td><b-form-checkbox checked="check_value='true"></b-form-checkbox></td>
   
 </tr>
 </table>
@@ -94,7 +51,6 @@
 </template>
 
 <script>
-import login from '@/components/login'
 export default {
   name: 'HelloWorld',
   data () {
@@ -105,7 +61,7 @@ export default {
          brd:'SSC',
          rowData:[],
          row_len:'0',
-         del:''
+         check_value:false
     }
   },
   methods:{
@@ -114,20 +70,22 @@ export default {
         sid:this.sid,
         sname:this.sname,
         cls:this.cls,
-        brd: this.brd
+        brd: this.brd,
+        check_value:this.check_value
+
 
       };
       this.rowData.push(my_object);
       this.$bvModal.hide('modal-1');
    },
     deleteTableRow: function() { 
+            alert("hiii");
             row_len = rowData.length;
             alert(row_len);
             for(var i=0; i<row_len; i++) 
             {
                 row = rowData[i];
-                chkbox = row.cells[0].childNodes[0];
-                if(chkbox.valueOf()=="accepted")
+                if(row.check_value==true)
                 {
                     del=this.rowData.splice(i, 1);
                     row_len--;
