@@ -1,12 +1,12 @@
 <template>
-<div class="topics">
+<div class="que">
 <div id="que_list" align="right" class="p-5 mb-1">
-    <b-button v-b-modal.modal-1 variant="success">Add Topic</b-button>
-    <b-modal id="modal-1" title="ADD TOPIC DETAILS" hide-footer>
+    <b-button v-b-modal.modal-1 variant="success">Add Question</b-button>
+    <b-modal id="modal-1" title="ADD QUESTION DETAILS" hide-footer>
     <table>
-    <tr><td>Topic ID</td><td><input type="text" v-model="tid"></td></tr>
-    <tr><td>Subject Name</td><td><input type="text" v-model="tname" ></td></tr>
-    <tr><td><button @click="addTableRow()">ADD TOPIC</button></td></tr>
+    <tr><td>Question Name</td><td><input type="text" v-model="qname"></td></tr>
+    <tr><td>Subject ID</td><td><input type="text" v-model="sid" ></td></tr>
+    <tr><td><button @click="addTableRow()">ADD QUESTION</button></td></tr>
     
     </table>
   </b-modal>
@@ -16,24 +16,30 @@
 <h3 align="center" style="color:#001a06">Topic List</h3>
 <table  class="table table-striped " striped id="sub_id">
 <thead style="background:#b8b894">
-<th>Topic ID</th>
-<th>Topic Name</th>
+<th>Question Name</th>
+<th>Subject ID</th>
+<th>Status</th>
 <th>Action</th>
 <th>Remove Topic</th>
 
 </thead>
-<tr v-for="item in topic_detail" :key="item.tid">
+<tr v-for="item in que_detail" :key="item.sid">
   
-  <td>{{ item.tid}}</td>
-  <td>{{ item.tname}}</td>
+  <td>{{ item.qname}}</td>
+  <td>{{ item.sid}}</td>
+  <td></td>
   
-<td><b-button v-b-modal.modal-2>Edit</b-button>
+<td><b-button variant="info" v-b-modal.modal-2>Edit</b-button>
     <b-modal id="modal-2" title="EDIT TOPIC DETAILS">
     <table>
     <tr><td>Topic ID</td><td><input type="text" v-model="tid"></td></tr>
     <tr><td>Topic Name</td><td><input type="text" v-model="tname" ></td></tr>
     </table>
-  </b-modal></td>
+  </b-modal>
+  <b-button variant="success">Verify</b-button>
+  <b-button variant="primary ">Preview</b-button>
+
+  </td>
   
  <td><b-form-checkbox checked="check_value='true"></b-form-checkbox></td>
   
@@ -48,9 +54,9 @@ export default {
   name: 'topic',
   data () {
     return {
-         tid:'',
-         tname:'',
-         topic_detail:[],
+         sid:'',
+         qname:'',
+         que_detail:[],
          row_len:'0',
 
     }
@@ -58,14 +64,14 @@ export default {
   methods:{
     addTableRow: function () { 
        var my_object = {
-        tid:this.tid,
-        tname:this.tname
+        sid:this.sid,
+        qname:this.qname
       };
-      this.topic_detail.push(my_object);
+      this.que_detail.push(my_object);
       this.$bvModal.hide('modal-1');
    },
     deleteTableRow: function() { 
-            this.topic_detail.pop();
+            this.que_detail.pop();
     }
 	}
 

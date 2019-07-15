@@ -52,13 +52,13 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'subject',
   data () {
     return {
-         sid:'01',
-         sname:'english',
-         cls:'10th',
-         brd:'SSC',
+         sid:'',
+         sname:'',
+         cls:'',
+         brd:'',
          rowData:[],
          row_len:'0',
          check_value:false

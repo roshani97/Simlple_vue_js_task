@@ -9,7 +9,7 @@
       <b-navbar-nav>
       <b-nav-item href="#" to="/subject" class="pl-5 mb-1" >Subjects</b-nav-item>
       <b-nav-item href="#" to="/topic" class="pl-5 mb-1">Topics</b-nav-item>
-      <b-nav-item href="#"  class="pl-5 mb-1">Questions</b-nav-item>
+      <b-nav-item href="#" to="/question" class="pl-5 mb-1">Questions</b-nav-item>
 
       <!-- Navbar dropdowns -->
       <b-nav-item-dropdown text="Utilities" class="pl-5 mb-1">
