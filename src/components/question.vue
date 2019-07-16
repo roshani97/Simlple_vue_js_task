@@ -27,7 +27,7 @@
   
   <td>{{ item.qname}}</td>
   <td>{{ item.sid}}</td>
-  <td></td>
+  <td>{{item.status}}</td>
   
 <td><b-button  v-b-modal.modal-2>Edit</b-button>
     <b-modal id="modal-2" title="EDIT TOPIC DETAILS">
@@ -56,6 +56,7 @@ export default {
     return {
          sid:'',
          qname:'',
+         status:'',
          que_detail:[],
          row_len:'0',
 
@@ -65,7 +66,8 @@ export default {
     addTableRow: function () { 
        var my_object = {
         sid:this.sid,
-        qname:this.qname
+        qname:this.qname,
+        status:this.status
       };
       this.que_detail.push(my_object);
       this.$bvModal.hide('modal-1');
