@@ -13,7 +13,7 @@
   <b-button  @click="deleteTableRow()" variant="danger">Remove</b-button>
 
 <br>
-<h3 align="center" style="color:#001a06">Topic List</h3>
+<h3 align="center" style="color:#001a06">Question List</h3>
 <table  class="table table-striped " striped id="sub_id">
 <thead style="background:#b8b894">
 <th>Question Name</th>
@@ -32,8 +32,8 @@
 <td><b-button  v-b-modal.modal-2>Edit</b-button>
     <b-modal id="modal-2" title="EDIT TOPIC DETAILS">
     <table>
-    <tr><td>Topic ID</td><td><input type="text" v-model="tid"></td></tr>
-    <tr><td>Topic Name</td><td><input type="text" v-model="tname" ></td></tr>
+    <tr><td>Question</td><td><input type="text" v-model="qname"></td></tr>
+    <tr><td>Subject Id</td><td><input type="text" v-model="sid" ></td></tr>
     </table>
   </b-modal>
   <b-button variant="success">Verify</b-button>
@@ -51,7 +51,7 @@
 </template>
 <script>
 export default {
-  name: 'topic',
+  name: 'question',
   data () {
     return {
          sid:'',
