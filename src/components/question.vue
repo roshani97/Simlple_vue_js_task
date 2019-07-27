@@ -12,6 +12,7 @@
     </table>
   </b-modal>
   <b-button to=/que_edit variant="">Update Question</b-button>
+  <b-button to=/add_sub variant="">Add Question</b-button>
   <b-button  @click="deleteTableRow()" variant="danger">Remove</b-button>
 
 <br>

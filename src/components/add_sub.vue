@@ -1,7 +1,11 @@
 <template>
 <div id="edit" align="center">
-<h3 align="center" style="padding-top:20px;" >Updating a Question</h3>
-<b-button style="float: right; margin-right:420px;width:200px;">Beginner</b-button>
+<h3 align="center" style="padding-top:20px;" >Adding a Question</h3>
+<div>
+<button style="float: right; margin-right:420px;width:200px;border-radius:7px; background:#5C5B5B;padding:4px;">Beginner</button>
+<button style=" float: right; margin-right:420px;width:200px;">Select Subject</button>
+</div>
+
   <div style="padding:50px;height:400px;width:700px;margin:60px;background:#A1A0A0" align="center">
       <b-input-group >
         <b-form-input style="border-radius:5px" placeholder="Question"></b-form-input>
@@ -52,7 +56,12 @@
         <tr>
           <td><label class="pt-3 pr-3" style="font-weight:bold">Solutions</label></td>
           <td><input class="mt-2 mr-5" style="border-radius:0px"></td>
-          <td><b-button class="mr-5 ml-5 pl-5 pr-5 " variant="primary"> Submit</b-button></td>
+          <td>
+              <div>
+                <button style="background:#2532AA;border-radius:5px;color:#FFFFFF">Add Another</button>
+                <button style="background:#2532AA;border-radius:5px;color:#FFFFFF">Submit</button>
+             </div>
+          </td>
 
         </tr>
       </table>
