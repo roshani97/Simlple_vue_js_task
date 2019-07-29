@@ -1,35 +1,41 @@
 <template>
 <div id="edit" align="center">
 <h3 align="center" style="padding-top:20px;" >Updating a Question</h3>
-<b-button style="float: right; margin-right:420px;width:200px;">Beginner</b-button>
+<div style="float:right; margin-right:380px;width:200px;">
+<b-dropdown id="dropdown-1" text="Beginner" class="m-md-2 pl-5 pr-5" >
+    <b-dropdown-item>Beginner</b-dropdown-item>
+    <b-dropdown-item>Intermediate</b-dropdown-item>
+    <b-dropdown-item>Hard</b-dropdown-item>
+  </b-dropdown>
+</div>
   <div style="padding:50px;height:400px;width:700px;margin:60px;background:#A1A0A0" align="center">
       <b-input-group >
         <b-form-input style="border-radius:5px" placeholder="Question"></b-form-input>
         <b-input-group-append>
-          <b-button   class="ml-5" style="border-radius:5px">Upload Image</b-button>
+          <b-form-input style="border-radius:5px;width:60%;" placeholder="Upload Image" class="ml-5 "></b-form-input>
         </b-input-group-append>
       </b-input-group>
       <b-input-group >
-        <b-form-input class="mt-3 mr-5" placeholder="Option 1" style="border-radius:5px"></b-form-input>
+        <b-form-input class="mt-3" placeholder="Option 1" style="border-radius:5px;"></b-form-input>
         <b-input-group-append>
-          <b-button   class="mt-3 mr-5" style="border-radius:5px">Upload Image</b-button>
+          <b-form-input style="border-radius:5px;width:70%;" placeholder="Upload Image" class=" mt-3 ml-2 "></b-form-input>
         </b-input-group-append>
 
-        <b-form-input placeholder="Option 2" class="mt-3 mr-5" style="border-radius:5px"></b-form-input>
+        <b-form-input class="mt-3" placeholder="Option 2" style="border-radius:5px;"></b-form-input>
         <b-input-group-append>
-          <b-button   class="  mt-3" style="border-radius:5px">Upload Image</b-button>
+          <b-form-input style="border-radius:5px;width:70%;" placeholder="Upload Image" class=" mt-3 ml-2 "></b-form-input>
         </b-input-group-append>
       </b-input-group>
 
       <b-input-group >
-        <b-form-input  class="mt-3 mr-5" placeholder="Option 3" style="border-radius:5px"></b-form-input>
+        <b-form-input class="mt-3" placeholder="Option 3" style="border-radius:5px;"></b-form-input>
         <b-input-group-append>
-          <b-button  class="mt-3 mr-5" style="border-radius:5px">Upload Image</b-button>
+          <b-form-input style="border-radius:5px;width:70%;" placeholder="Upload Image" class=" mt-3 ml-2 "></b-form-input>
         </b-input-group-append>
 
-        <b-form-input placeholder="Option 4" class="mt-3 mr-5" style="border-radius:5px"></b-form-input>
+        <b-form-input class="mt-3" placeholder="Option 4" style="border-radius:5px;"></b-form-input>
         <b-input-group-append>
-          <b-button  class="  mt-3" style="border-radius:5px">Upload Image</b-button>
+          <b-form-input style="border-radius:5px;width:70%;" placeholder="Upload Image" class=" mt-3 ml-2 "></b-form-input>
         </b-input-group-append>
       </b-input-group>
 
