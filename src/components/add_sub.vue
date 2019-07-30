@@ -107,7 +107,6 @@
           </td>
           <td>
             <div>
-              <button style="background:#2532AA;border-radius:5px;color:#FFFFFF">Add Another</button>
               <button style="background:#2532AA;border-radius:5px;color:#FFFFFF">Submit</button>
             </div>
           </td>
